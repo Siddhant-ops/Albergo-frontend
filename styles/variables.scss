@@ -1,0 +1,20 @@
+// font Monsterrat
+$Montserrat: 'Montserrat', sans-serif;
+
+// color variables
+$primaryBg: #cfd7d7;
+$secondaryColor: #5a7171;
+$fontGray: #484848;
+$fontWhite: #ffffff;
+
+// font-variation mixin
+@mixin font-variation($font-weight) {
+  font-variation-settings: 'wght' $font-weight;
+}
+
+// display flex mixin
+@mixin display-flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

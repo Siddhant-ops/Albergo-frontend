@@ -1,0 +1,70 @@
+@use '../variables';
+
+nav {
+  @include variables.display-flex(space-between, center);
+  width: 100vw;
+  max-width: 100%;
+  padding: 1rem 3rem;
+
+  h2 {
+    @include variables.font-variation(600);
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+  ul {
+    @include variables.display-flex(space-between, center);
+    list-style: none;
+    gap: 1rem;
+
+    li a {
+      @include variables.font-variation(600);
+    }
+
+    .nav__partnerBtn {
+      @include variables.font-variation(500);
+      letter-spacing: 1px;
+      background-color: variables.$secondaryColor;
+      color: variables.$fontWhite;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      -webkit-border-radius: 2rem;
+      -moz-border-radius: 2rem;
+      -ms-border-radius: 2rem;
+      -o-border-radius: 2rem;
+    }
+  }
+
+  .nav__hamburger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 1rem 1rem;
+
+    .nav__navLinks {
+      display: none;
+    }
+
+    ul {
+      gap: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  nav {
+    padding: 1rem 1rem;
+
+    .nav__actions {
+      display: none;
+    }
+
+    .nav__hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
